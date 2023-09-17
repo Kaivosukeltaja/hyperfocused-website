@@ -10,6 +10,15 @@ export const MainPage = styled.main`
   text-align: center;
 `
 
+export const ImageHolder = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+`
+
 export const BackgroundImage = styled(LogoSvg)`
   pointer-events: none;
   fill: rgb(14, 36, 47);
@@ -24,13 +33,20 @@ export const BackgroundImage = styled(LogoSvg)`
 
 export const Split = styled.div`
   display: flex;
+  flex-grow: 1;
+  width: 100%;
   justify-content: space-around;
   text-align: left;
+`
 
-  > * {
-    flex: 0 1 50%;
-  }
+export const SplitCell = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex: 0 1 50%;
+  position: relative;
 `
 
 export const MainContent = styled.div`
+  max-width: 38rem;
+  align-self: center;
 `
